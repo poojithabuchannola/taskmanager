@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explorer Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <h1>DOM Explorer</h1>
+                <p>Task Management Dashboard</p>
+            </div>
+
+            <button id="themeToggle">
+                🌙 Theme
+            </button>
+        </header>
+
+        <section class="card add-task">
+
+            <h2>Add New Task</h2>
+
+            <input type="text"
+                id="taskTitle"
+                placeholder="Enter task title">
+
+            <textarea
+                id="taskDescription"
+                placeholder="Enter task description">
+            </textarea>
+
+            <select id="taskCategory">
+
+                <option value="Study">
+                    📚 Study
+                </option>
+
+                <option value="Work">
+                    💼 Work
+                </option>
+
+                <option value="Personal">
+                    👤 Personal
+                </option>
+
+            </select>
+
+            <button id="addTaskBtn">
+                Add Task
+            </button>
+
+        </section>
+
+        
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total</h3>
+                <p id="totalCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedCount">0</p>
+            </div>
+
+        </section>
+
+        <section class="card search-card">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Tasks">
+
+            <select id="filterCategory">
+
+                <option value="All">
+                    All Categories
+                </option>
+
+                <option value="Study">
+                    Study
+                </option>
+
+                <option value="Work">
+                    Work
+                </option>
+
+                <option value="Personal">
+                    Personal
+                </option>
+
+            </select>
+
+        </section>
+
+        
+        <section>
+
+            <h2 class="section-title">
+                📋 Task List
+            </h2>
+
+            <div id="taskContainer">
+
+            </div>
+
+        </section>
+
+        
+        <div class="model"
+            id="editModel">
+
+            <div class="model-content">
+
+                <span
+                    class="close-btn"
+                    id="closeModel">
+                    &times;
+                </span>
+
+                <h2>Edit Task</h2>
+
+                <input
+                    type="text"
+                    id="editTitle"
+                    placeholder="Task Title">
+
+                <textarea
+                    id="editDescription"
+                    placeholder="Description">
+                </textarea>
+
+                <select id="editCategory">
+
+                    <option value="Study">
+                        📚 Study
+                    </option>
+
+                    <option value="Work">
+                        💼 Work
+                    </option>
+
+                    <option value="Personal">
+                        👤 Personal
+                    </option>
+
+                </select>
+
+                <button id="updateTaskBtn">
+                    Update Task
+                </button>
+
+            </div>
+
+        </div>
+
+        <section class="card">
+
+            <h2>
+                Attributes vs Properties
+            </h2>
+
+            <input
+                type="text"
+                id="demoInput"
+                value="Original Value">
+
+            <button id="showDifference">
+                Show Difference
+            </button>
+
+            <p id="differenceResult"></p>
+
+        </section>
+
+       
+        <section class="card">
+
+            <h2>
+                Event Propagation Demo
+            </h2>
+
+            <div id="grandparent">
+
+                Grandparent
+
+                <div id="parent">
+
+                    Parent
+
+                    <button id="child">
+                        Child Button
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
